@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Buttons - PacketPrep Testing</title>
+    <title>Form - PacketPrep Testing</title>
     <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 
       <style>
@@ -73,25 +73,24 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
   <div class="container">
-    <h1 class="mt-5">Testing Demo - Buttons</h1>
-    <p class="lead">This is a sample page to show case clicking buttons using the ID locators.</p>
-    <p>Do you want to visit Google  website? Then click here <a href="https://google.com" id="clickme">Click Me</a></p>
-    <button id="btn_one" class="btn btn-primary mr-3">Button One</button> 
-    <button id="btn_two" class="btn btn-success mr-3">Button Two</button>
-    <button id="btn_three" class="btn btn-danger">Button Three</button>
+    <h1 class="mt-5">Testing Demo -  Form</h1>
+    <p class="lead">This is a sample page to show case interaction using form elements using the name locators.</p>
+ 
+    
+    <div class="mb-3 bg-light border p-3">
+      <label for="formGroupExampleInput" class="form-label">Enter your full name</label>
+      <input type="text" class="form-control" id="formGroupName" name="fullname" placeholder="Enter your name">
+      <label for="formGroupExampleInput" class="form-label">Enter your age</label>
+      <input type="text" class="form-control" id="formGroupAge" name="age" placeholder="Enter your age">
+
+      <button class="btn btn-danger my-3" id="submit" >Submit</button>
+    </div>
 
     <div class="alert alert_one alert-primary mt-5" role="alert" style="display: none;">
       <h4 class="alert-heading">Well done!</h4>
       <p id="alert_message" class=" alert_message mb-0 pb-0">You have clicked <b>Button One</b></p>
     </div>
-    <div class="alert alert_two alert-success mt-5" role="alert" style="display: none;">
-      <h4 class="alert-heading">Well done!</h4>
-      <p id="alert_message" class=" alert_message mb-0 pb-0">You have clicked <b>Button Two</b></p>
-    </div>
-    <div class="alert alert_three alert-danger mt-5" role="alert" style="display: none;">
-      <h4 class="alert-heading">Well done!</h4>
-      <p id="alert_message" class=" alert_message mb-0 pb-0">You have clicked <b>Button Three</b></p>
-    </div>
+    
   </div>
 </main>
 
@@ -104,14 +103,11 @@
         $(function(){
             
             $(document).on('click','.btn',function(){
-                var name = $(this).html();
-                $('.alert').hide();
-                if(name=='Button One')
+                var name = $('#formGroupName').val();
+                var age = $('#formGroupAge').val();
+                $('.alert_message').html("<div> You have entered name<b>["+name+"]</b> and age<b>["+age+"]</b></div>");
                 $('.alert_one').show();
-            if(name=='Button Two')
-                $('.alert_two').show();
-            if(name=='Button Three')
-                $('.alert_three').show();
+
 
             });
         });

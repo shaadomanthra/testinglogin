@@ -2,6 +2,6 @@
 
 use App\Http\Controllers\TestingController;
 
-
- Route::get('buttons', [TestingController::class, 'buttons'])
-                ->name('buttons');
+/* Testing Demo Routes */
+Route::get('buttons', [TestingController::class, 'buttons'])->name('buttons');
+Route::get('form', [TestingController::class, 'form'])->name('form');
