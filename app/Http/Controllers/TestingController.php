@@ -20,4 +20,7 @@ class TestingController extends Controller
     public function form3(Request $r){
         return view('testing.form3');
     }
+    public function elements(Request $r){
+        return view('testing.elements');
+    }
 }

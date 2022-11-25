@@ -19,7 +19,27 @@
             if(name=='Button Three')
                 $('.alert_three').show();
 
+
+
             });
+
+            $(document).on('click','#btn_alert1',function(){
+              alert("You have clicked on alert");
+            });
+            $(document).on('click','#btn_alert2',function(){
+                
+                  alertFunction();
+            });
+
+            function alertFunction() {
+              let text = "Press a button!\nEither OK or Cancel.";
+              if (confirm(text) == true) {
+                text = "You pressed OK!";
+              } else {
+                text = "You canceled!";
+              }
+              document.getElementById("demo").innerHTML = text;
+            }
 
             $(document).on('click','#submit_form',function(){
                 var name = $('#formGroupName').val();
