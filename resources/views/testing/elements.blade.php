@@ -4,16 +4,14 @@
 
     <div class="bg-white p-3 my-2">
       <h4>Alerts</h4>
-    <p id="hello">
-      Hello, press the below buttons to trigger alert
-    </p>
+    
     <button id="btn_alert1" class="btn btn-primary mr-3">Button Alert 1</button> 
     <button id="btn_alert2" class="btn btn-success mr-3">Button Alert 2</button>
     <br><br>
     <p id="message" hidden>
       This is a hidden element
     </p>
-    <h4>Accordions</h4>
+   <br>
     <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
