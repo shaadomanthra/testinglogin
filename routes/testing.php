@@ -10,3 +10,4 @@ Route::get('form3', [TestingController::class, 'form3'])->name('form3');
 Route::get('elements', [TestingController::class, 'elements'])->name('elements');
 Route::get('elements2', [TestingController::class, 'elements2'])->name('elements2');
 Route::get('elements3', [TestingController::class, 'elements3'])->name('elements3');
+Route::get('elements4', [TestingController::class, 'elements4'])->name('elements4');

@@ -18,6 +18,8 @@
                 $('.alert_two').show();
             if(name=='Button Three')
                 $('.alert_three').show();
+            if(name=='Button Four')
+                $('.alert_four').show();
 
 
 
